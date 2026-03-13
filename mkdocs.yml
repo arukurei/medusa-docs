@@ -8,7 +8,7 @@ docs_dir: docs
 exclude_docs: overrides
 
 # Repository
-repo_name: arukurei/daicon-docs
+repo_name: arukurei/medusa-docs
 repo_url: https://github.com/arukurei/medusa-docs
 
 # Copyright
