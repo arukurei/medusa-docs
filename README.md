@@ -1,4 +1,4 @@
-![README_Logo.png](docs/assets/images/README_Logo.png)
+![ReadmeLogo.png](docs/assets/images/ReadmeLogo.png)
 
 # Medusa-Docs
 
