@@ -1,0 +1,253 @@
+/* ==========================================================================
+   1. FONTS
+   ========================================================================== */
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/JetBrainsMono-Regular.ttf");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/JetBrainsMono-Bold.ttf");
+}
+
+:root {
+  --md-text-font: "JetBrains Mono";
+  --md-code-font: "JetBrains Mono";
+}
+
+h1, h2, h3, h4, h5, h6, .md-header__title {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   2. THEMES
+   ========================================================================== */
+[data-md-color-scheme="slate"] {
+  --md-hue: 230;
+  --md-primary-fg-color: #44acf2;
+  --md-accent-fg-color: #84f9b2;
+  --md-default-bg-color: #282e35;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #44acf2;
+  --md-accent-fg-color: #84f9b2;
+}
+
+/* ==========================================================================
+   3. CONTAINER
+   ========================================================================== */
+.mdx-container {
+    padding-top: 1rem;
+    background-repeat: no-repeat !important;
+    background-position: bottom !important;
+    background-image:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1123 258'><path d='M1124,2c0,0 0,256 0,256l-1125,0l0,-48c0,0 16,5 55,5c116,0 197,-92 325,-92c121,0 114,46 254,46c140,0 214,-167 572,-166Z' style='fill: %23ffffff' /></svg>"),
+        linear-gradient(to bottom, #44acf2 0%, #7a6ae6 70%, #ffffff 99%) !important;
+}
+
+[data-md-color-scheme="slate"] .mdx-container {
+    background-image:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1123 258'><path d='M1124,2c0,0 0,256 0,256l-1125,0l0,-48c0,0 16,5 55,5c116,0 197,-92 325,-92c121,0 114,46 254,46c140,0 214,-167 572,-166Z' style='fill: %23282e35' /></svg>"),
+        linear-gradient(to bottom, #44acf2 0%, #7a6ae6 70%, #282e35 99%) !important;
+}
+
+/* ==========================================================================
+   4. HERO
+   ========================================================================== */
+@media screen and (min-width: 60em) {
+  .mdx-hero {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 5rem;
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 0 1rem !important;
+  }
+
+  .mdx-hero__image {
+    order: 1 !important;
+    flex: 0 0 400px !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .mdx-hero__content {
+    order: 2 !important;
+    flex: 1 1 auto !important;
+    margin-top: 2rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 5rem !important;
+    max-width: 500px !important;
+  }
+}
+
+.mdx-hero__content h1 {
+  color: white !important;
+  font-size: 1.6rem !important;
+  font-weight: bold !important;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  max-width: none !important;
+}
+
+.mdx-hero__content p {
+  font-size: 0.9rem !important;
+  margin-bottom: 2rem !important;
+  max-width: 900px;
+}
+
+/* Цвета описания */
+.mdx-hero__content p { color: rgba(255, 255, 255, 0.9) !important; }
+[data-md-color-scheme="slate"] .mdx-hero__content p { color: #ffffff !important; }
+
+
+/* ==========================================================================
+   5. BUTTONS
+   ========================================================================== */
+.mdx-hero .md-button {
+  padding: 0.7rem 1.8rem !important;
+  font-weight: bold !important;
+  border-radius: 4px !important;
+  display: inline-block;
+  transition: background-color 0.2s, color 0.2s !important;
+  transform: none !important;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Светлая тема */
+[data-md-color-scheme="default"] .md-button.md-button--primary {
+  background-color: #282e35 !important;
+  color: white !important;
+  border: 2px solid #282e35 !important;
+}
+[data-md-color-scheme="default"] .md-button:not(.md-button--primary) {
+  background-color: transparent !important;
+  color: #282e35 !important;
+  border: 2px solid #282e35 !important;
+}
+
+/* Темная тема */
+[data-md-color-scheme="slate"] .md-button.md-button--primary {
+  background-color: white !important;
+  color: #282e35 !important;
+  border: 2px solid white !important;
+}
+[data-md-color-scheme="slate"] .md-button:not(.md-button--primary) {
+  background-color: transparent
+  !important; color: white !important;
+  border: 2px solid white !important;
+}
+
+/* ХОВЕР */
+.mdx-hero .md-button:hover,
+.mdx-hero .md-button:focus {
+  background-color: #84f9b2 !important;
+  color: #282e35 !important;
+  border-color: #84f9b2 !important;
+}
+
+
+/* ==========================================================================
+   6. MOBILE VERSION
+   ========================================================================== */
+@media screen and (max-width: 60em) {
+  .mdx-hero {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    padding-bottom: 3rem !important;
+  }
+  .mdx-hero__image {
+    flex: 0 0 auto !important;
+    width: 300px !important;
+    transform: none !important;
+    margin: 0 auto !important;
+  }
+  .mdx-hero__content {
+    max-width: 100% !important;
+  }
+}
+
+/* ==========================================================================
+   7. UTILS & COMPONENTS
+   ========================================================================== */
+
+/* Анимация пульсирующего сердца */
+@keyframes heart {
+  0%, 40%, 80%, 100% { transform: scale(1); }
+  20%, 60% { transform: scale(1.15); }
+}
+.md-typeset .mdx-heart,
+.md-typeset .mdx-badge--heart .twemoji {
+  animation: heart 1s infinite;
+}
+
+/* Цвета соцсетей */
+.md-typeset .twitter { color: #00acee; }
+.md-typeset .mastodon { color: #897ff8; }
+
+/* Адаптивное видео */
+.md-typeset .mdx-video { width: auto; }
+.md-typeset .mdx-video__inner {
+  height: 0; padding-bottom: 56.138%; position: relative; width: 100%;
+}
+.md-typeset .mdx-video iframe {
+  border: none; height: 100%; left: 0; position: absolute; top: 0; width: 100%;
+}
+
+/* Значки (Badges) */
+.md-typeset .mdx-badge { font-size: .85em; }
+.md-typeset .mdx-badge--heart {
+  --md-typeset-a-color: #e92063;
+  --md-accent-fg-color: #ff4281;
+  color: #e91e63;
+}
+.md-typeset .mdx-badge__icon {
+  background: var(--md-accent-fg-color--transparent);
+  padding: .2rem; border-radius: .1rem;
+}
+.md-typeset .mdx-badge__text {
+  box-shadow: 0 0 0 1px inset var(--md-accent-fg-color--transparent);
+  padding: .2rem .3rem; border-radius: .1rem;
+}
+
+/* Колонки и списки */
+.md-typeset .mdx-columns ol,
+.md-typeset .mdx-columns ul { column-count: 2; }
+@media screen and (max-width: 30em) {
+  .md-typeset .mdx-columns ol, .md-typeset .mdx-columns ul { column-count: 1; }
+}
+
+/* Поиск иконок (Icon Search) */
+.md-typeset .mdx-iconsearch {
+  background-color: var(--md-default-bg-color);
+  border-radius: .1rem;
+  box-shadow: var(--md-shadow-z1);
+  position: relative;
+}
+.md-typeset .mdx-iconsearch-result {
+  max-height: 50vh; overflow-y: auto;
+}
+
+/* Спонсорство и Premium блоки */
+.md-typeset .mdx-premium { margin: 2em 0; text-align: center; }
+.md-typeset .mdx-sponsorship__list {
+  display: flex; flex-wrap: wrap; gap: .4rem; margin: 2em 0;
+}
+.md-typeset .mdx-sponsorship__item {
+  border-radius: 100%; width: 1.6rem; height: 1.6rem;
+  overflow: hidden; transition: transform 125ms;
+}
+.md-typeset .mdx-sponsorship__item:hover { transform: scale(1.1); }
+.md-typeset .mdx-sponsorship__item img { filter: grayscale(100%); transition: filter 125ms; }
+.md-typeset .mdx-sponsorship__item:hover img { filter: grayscale(0); }

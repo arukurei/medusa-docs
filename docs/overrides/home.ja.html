@@ -1,0 +1,46 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+    .md-header{position:initial}
+    .md-main__inner{margin:0}
+    .md-content{display:none}
+    @media screen and (min-width:60em){.md-sidebar--secondary{display:none}}
+    @media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}
+  </style>
+
+  <!-- Hero for landing page -->
+  <section class="mdx-container">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
+        <div class="mdx-hero__image">
+          <img src="../assets/images/Logo.png" alt="" width="400" height="400" draggable="false">
+        </div>
+
+        <div class="mdx-hero__content">
+          <h1>Medusa — グラフとスキルツリーのための高性能フレームワーク</h1>
+          <p>Godotで動的なUIグラフとインタラクティブなスキルツリーを設計しましょう。</p>
+
+          <a href="{{ 'ja/getting-started/getting_started/' | url }}"
+             title="{{ page.next_page.title | e }}"
+             class="md-button md-button--primary">
+            スタートガイド
+          </a>
+          <a href="{{ 'ja/references/data/data' | url }}"
+             title="Data"
+             class="md-button">
+            リファレンス
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+<!-- Application footer -->
+{% block footer %}{% endblock %}

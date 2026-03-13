@@ -1,0 +1,126 @@
+# Project information
+site_name: Medusa Docs
+site_author: Alkrei
+site_url: !ENV READTHEDOCS_CANONICAL_URL
+site_description: >-
+  A high-performance framework for building dynamic UI graphs, skill trees, and node-based webs.
+docs_dir: docs
+exclude_docs: overrides
+
+# Repository
+repo_name: arukurei/daicon-docs
+repo_url: https://github.com/arukurei/medusa-docs
+
+# Copyright
+copyright: Copyright &copy; 2026 Alkrei
+
+# Configuration
+theme:
+  name: material
+  custom_dir: docs/overrides
+  font:
+    text: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - announce.dismiss
+    - search.suggest
+    - search.highlight
+    - search.share
+
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+
+    - toc.follow
+    - content.code.annotate
+  favicon: assets/images/Favicon.png
+  logo: assets/images/Favicon.png
+  icon:
+    repo: fontawesome/brands/github-alt
+
+# Additional configuration
+extra:
+  social:
+    - icon: octicons/mark-github-24
+      link: https://github.com/arukurei
+      name: GitHub
+    - icon: fontawesome/brands/itch-io
+      link: https://alkrei.itch.io
+      name: Itch.io
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/arukurei.bsky.social
+      name: My bluesky channel
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/G_Quasar
+      name: My own telegram channel
+extra_css:
+  - assets/stylesheets/extra.css
+
+# Extensions
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+# Plugins
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: ru
+          name: Русский
+          build: true
+        - locale: ja
+          name: 日本語
+          build: true
+  - mkdocs-izsam-video
+  - git-authors
+  - git-revision-date-localized:
+     enable_creation_date: true
+
+# Page tree
+nav:
+  - Home: index.md
+  - Getting started:
+      - Installation: getting-started/getting_started.md
+      - Setup: getting-started/setup.md
+      - Creating your graph: getting-started/creating_your_game.md
+  - References:
+      - Database: references/data/data.md
+      - Automation: references/auto.md
+      - Physics: references/physics/physics.md
+      - GraphLines: references/graph_lines/graph_lines.md
+      - GraphLogics: references/graph_logics/graph_logics.md
+  - Contributing: contributing.md
+  - Made with Medusa:
+      - Demo: made-with-medusa/demo.md
+      - Made with Medusa: made-with-medusa/made_with_daicon.md
