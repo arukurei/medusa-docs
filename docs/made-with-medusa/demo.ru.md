@@ -1,4 +1,4 @@
 # Demo
 
 ## Version 1.0
-![Trailer.mp4](../assets/demo/Trailer.mp4)
+![type:video-tag](../assets/demo/Trailer.mp4)
